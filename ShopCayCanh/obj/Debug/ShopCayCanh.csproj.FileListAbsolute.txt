@@ -224,8 +224,8 @@ D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\bin\System.Web.Webpages.Razor.
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\bin\System.Web.Helpers.xml
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\bin\System.Web.Mvc.xml
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csprojAssemblyReference.cache
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.CoreCompileInputs.cache
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.CopyComplete
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.dll
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.pdb
+D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.AssemblyReference.cache

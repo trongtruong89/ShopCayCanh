@@ -228,4 +228,3 @@ D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.C
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.CopyComplete
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.dll
 D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.pdb
-D:\HUTECH\DoAnChuyenNganh\ShopCayCanh\ShopCayCanh\obj\Debug\ShopCayCanh.csproj.AssemblyReference.cache

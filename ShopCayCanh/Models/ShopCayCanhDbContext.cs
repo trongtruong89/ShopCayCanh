@@ -8,7 +8,7 @@ namespace ShopCayCanh.Models
 {
     public class ShopCayCanhDbContext : DbContext
     {
-        public ShopCayCanhDbContext() : base("Data Source=TMTRONG-LAPTOP;Initial Catalog=ShopCayCanh;uid=sa;pwd=sa842641;MultipleActiveResultSets=True;Integrated Security=True")
+        public ShopCayCanhDbContext() : base("DefaultConnection")
         { }
         public virtual DbSet<Mcategory> Categorys { get; set; }
         public virtual DbSet<Mcontact> Contacts { get; set; }

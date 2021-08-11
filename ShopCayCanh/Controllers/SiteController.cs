@@ -64,7 +64,6 @@ namespace ShopCayCanh.Controllers
             return View("Index", list);
         }
 
-
         public ActionResult topic_category(String slug)
         {
             var catid = db.topics.Where(m => m.status == 1 && m.slug == slug).First();

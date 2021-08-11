@@ -182,6 +182,7 @@
     <None Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="count_visit.txt" />
     <Content Include="Views\web.config">
       <SubType>Designer</SubType>
     </Content>

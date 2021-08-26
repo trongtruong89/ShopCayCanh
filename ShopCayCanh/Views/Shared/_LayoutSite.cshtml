@@ -56,12 +56,12 @@
     @RenderBody()
     <div class="clearfix">  </div>
 
-    </section>
+    
     <section class="pt-4">
         <div class="container-fluid bg-light pt-4 ">
             <div class="container">
                 <div class="row ">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <p class="font-dam text-xanhduong"> Hỗ Trợ Khách Hàng</p>
                         <ul class="list-unstyled text-nau">
                             <li>Thẻ Ưu Đãi</li>
@@ -91,7 +91,7 @@
                             <li> <i class="fab fa-twitter-square text-info"></i> Thanh Toán Và Vận Chuyển</li>
                         </ul>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <p class="font-dam text-xanhduong">Đăng Kí Nhận Tin</p>
                         <div class="btn-group w-100">
                             <input type="input" class="form-control  " name="subrite">
@@ -105,7 +105,7 @@
         </div>
         <div class="card-footer text-center">
 			<span class=" text-center">Copyright © 2021 </span>
-			<div><span>Số lượt truy cập: @System.Web.HttpContext.Current.Application["VisitCounter"].ToString()</span> | <span> Số Users Online: @System.Web.HttpContext.Current.Application["OnlineUsers"].ToString()</span> </div>
+			<div><span>Số lượt truy cập: @System.Web.HttpContext.Current.Application["CounterNum"].ToString()</span> | <span> Số Users Online: @System.Web.HttpContext.Current.Application["OnlineUsers"].ToString()</span> </div>
         </div>
 
     </section>

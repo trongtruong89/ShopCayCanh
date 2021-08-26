@@ -88,5 +88,40 @@ namespace ShopCayCanh.Controllers
         {
             return View("");
         }
+
+        public ActionResult Search(FormCollection formCollection)
+        {
+            //List<searchresult> searchResults = new List<searchresult>();
+            //var query = formCollection["search"];
+            //string indexDirectory = Server.MapPath("~/App_Data/LuceneIndexes");
+            //var analyzer = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30);
+            //IndexSearcher searcher = new IndexSearcher(FSDirectory.Open(indexDirectory));
+            //var parser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "postBody", analyzer);
+            //Query searchQuery = parser.Parse(query);
+            //TopDocs hits = searcher.Search(searchQuery, 200);
+            //int results = hits.TotalHits;
+            //SearchResult searchResult = null;
+            //for (int i = 0; i < results; i++)
+            //{
+            //    Document doc = searcher.Doc(hits.ScoreDocs[i].Doc);
+            //    searchResult = new SearchResult();
+            //    searchResult.PostUrl = doc.Get("postUrl");
+            //    searchResult.PostTitle = doc.Get("postTitle");
+            //    searchResult.PostIntro = doc.Get("postIntro");
+            //    searchResults.Add(searchResult);
+            //    searchResult = null;
+            //}
+            //return View(searchResults);
+            return View("");
+        }
+
+        public class SearchResult
+        {
+            public string PostUrl { get; set; }
+
+            public string PostTitle { get; set; }
+
+            public string PostIntro { get; set; }
+        }
     }
 }

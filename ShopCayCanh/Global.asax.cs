@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using ShopCayCanh.App_Start;
 
 namespace ShopCayCanh
 {
@@ -13,6 +14,7 @@ namespace ShopCayCanh
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            LuceneSearchConfig.InitializeSearch();
 
             int visitCounter = 0;
             //Kiểm tra file count_visit.txt nếu không tồn tại thì
@@ -27,22 +29,20 @@ namespace ShopCayCanh
                 System.IO.StreamReader read = new System.IO.StreamReader(Server.MapPath("count_visit.txt"));
                 visitCounter = int.Parse(read.ReadLine());
                 read.Close();
-                // Tăng biến count_visit thêm 1
-                visitCounter++;
+                
             }
 
             // khóa website
-            Application.Lock();
+            //Application.Lock();
             // gán biến Application count_visit
-            Application["VisitCounter"] = visitCounter;
+            Application["CounterNum"] = visitCounter;
             // Mở khóa website
-            Application.UnLock();
+            //Application.UnLock();
 
             //Khi chạy từ Visual Studio thì event Application_End không được trigger.
             //Nên tạm thời ghi file ngay trên Application_Start để lưu lại số lượt truy cập
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(Server.MapPath("count_visit.txt"));
-            writer.WriteLine(visitCounter);
-            writer.Close();
+            //Nếu chạy IIS hosting thì có thể bỏ đoạn này
+            //SaveVisitCounter();
         }
 
         void Application_End(object sender, EventArgs e)
@@ -52,10 +52,7 @@ namespace ShopCayCanh
 
             //Khi chạy từ Visual Studio thì event này không được trigger.
             //Nên tạm thời ghi file ngay trên Application_Start để lưu lại số lượt truy cập
-            int visitCounter = (int)Application["VisitCounter"];
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(Server.MapPath("count_visit.txt"));
-            writer.WriteLine(visitCounter);
-            writer.Close();
+            SaveVisitCounter();
 
         }
         protected void Session_Start()
@@ -76,8 +73,13 @@ namespace ShopCayCanh
                 Application["OnlineUsers"] = 0;
             //sau đó tăng số đếm
             Application["OnlineUsers"] = (int)Application["OnlineUsers"] + 1;
+
+            //Tăng số lượt truy cập
+            Application["CounterNum"] = (int)Application["CounterNum"] +1;
+
             Application.UnLock();
-            
+
+            SaveVisitCounter();            
         }
 
         void Session_End(object sender, EventArgs e)
@@ -86,6 +88,14 @@ namespace ShopCayCanh
             //giảm số đếm người online
             Application["OnlineUsers"] = (int)Application["OnlineUsers"] - 1;
             Application.UnLock();
+        }
+
+        void SaveVisitCounter()
+		{
+            int visitCounter = (int)Application["CounterNum"];
+            System.IO.StreamWriter writer = new System.IO.StreamWriter(Server.MapPath("~/count_visit.txt"));
+            writer.WriteLine(visitCounter);
+            writer.Close();
         }
     }
 }
